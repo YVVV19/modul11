@@ -1,38 +1,37 @@
 from fastapi import FastAPI, status
 
-app=FastAPI()
+app=FastAPI
 
-
-@app.get("user", tags=["read"], summary="about user")
+@app.get("user", tags=["user"], summary="about user")
 def user():
     return "user"
 
-@app.get("cat", tags=["read"], summary="about cat")
+@app.get("cat", tags=["cat"], summary="about cat")
 def cat():
     return "cat"
 
-@app.get("car", tags=["read"], summary="about car")
+@app.get("car", tags=["car"], summary="about car")
 def car():
     return "car"
 
-@app.get("plane", tags=["read"], summary="about plane")
+@app.get("plane", tags=["plane"], summary="about plane")
 def plane():
     return "plane"
 
 ####
-@app.post("user", tags=["create"], summary="about user")
+@app.post("user", tag=["user"], summary="about user")
 def user():
     return "user"
 
-@app.post("cat", tags=["create"], summary="about cat")
+@app.post("cat", tag=["cat"], summary="about cat")
 def cat():
     return "cat"
 
-@app.post("car", tags=["create"], summary="about car")
+@app.post("car", tag=["car"], summary="about car")
 def car():
     return "car"
 
-@app.post("plane", tags=["create"], summary="about plane")
+@app.post("plane", tags=["plane"], summary="about plane")
 def plane():
     return "plane"
 
